@@ -31,6 +31,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  stacked: ^3.0.1
+  stacked_hooks: ^0.2.0
+  get: ^4.1.4
+  get_storage: ^2.0.1
+  get_it: ^7.1.3
+
+  provider: ^6.0.5
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -53,10 +61,17 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+ uses-material-design: true
+
+assets:
+    # Images
+    - assets/
+    - assets/sample.json
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  
 
   # To add assets to your application, add an assets section, like this:
   # assets:
