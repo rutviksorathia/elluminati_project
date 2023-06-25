@@ -33,7 +33,7 @@ class Specification {
   List<String> name;
   int sequenceNumber;
   int uniqueId;
-  List<List1> list;
+  List<SpecificationList> list;
   int maxRange;
   int range;
   int type;
@@ -71,7 +71,9 @@ class Specification {
       name: List<String>.from(map['name']),
       sequenceNumber: map['sequence_number'],
       uniqueId: map['unique_id'],
-      list: (map['list'] as List).map((e) => List1.fromMap(e)).toList(),
+      list: (map['list'] as List)
+          .map((e) => SpecificationList.fromMap(e))
+          .toList(),
       maxRange: map['max_range'],
       range: map['range'],
       type: map['type'],
@@ -88,7 +90,7 @@ class Specification {
   }
 }
 
-class List1 {
+class SpecificationList {
   String sId;
   List<String> name;
   int price;
@@ -97,7 +99,7 @@ class List1 {
   String specificationGroupId;
   int uniqueId;
 
-  List1({
+  SpecificationList({
     required this.sId,
     required this.name,
     required this.price,
@@ -107,8 +109,8 @@ class List1 {
     required this.uniqueId,
   });
 
-  factory List1.fromMap(Map<String, dynamic> map) {
-    return List1(
+  factory SpecificationList.fromMap(Map<String, dynamic> map) {
+    return SpecificationList(
         sId: map['_id'],
         name: List<String>.from(map['name']),
         price: map['price'],
